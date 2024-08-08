@@ -14,10 +14,9 @@ const Features = () => {
       { scale: 1, opacity: 1, ease: 'power1' },
       { scrub: 5.5 }
     );
-    animateWithGsap(
-      '.g_text',
-      {y:0, opacity: 1,ease: 'power2.inOut',duration: 0}
-    )
+    gsap.to("#g_text", {
+      y:0, opacity: 1,ease: 'power2.inOut',duration: 1
+    })
   }, []);
 
   return (
@@ -73,7 +72,7 @@ const Features = () => {
 
               <div className="feature-text-container">
                 <div className="flex-1 flex-center">
-                  <p className="feature-text g_text">
+                  <p id="g_text" className="feature-text">
                     iPhone 15 Pro is {' '}
                     <span className="text-white">
                       the first iPhone to feature an aerospace-grade titanium design
