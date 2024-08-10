@@ -33,7 +33,7 @@ const Footer = () => {
             {footerLinks.map((link, i) => (
               <p key={link} className="flex md:flex-row flex-col md:items-center justify-between">
                 {link}{' '}
-                {i !==footerLinks.length - 1 && (
+                {i !== footerLinks.length - 1 && (
                   <span className="mx-2"> | </span>
                 )}
               </p>
