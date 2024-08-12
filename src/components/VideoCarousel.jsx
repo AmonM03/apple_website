@@ -64,10 +64,10 @@ const VideoCarousel = () => {
             gsap.to(videoDivRef.current[videoId], {
               width:
                 window.innerWidth < 760
-                  ? "10vw" 
+                  ? "10vw"
                   : window.innerWidth < 1200
-                  ? "10vw" 
-                  : "4vw", 
+                    ? "10vw"
+                    : "4vw",
             });
 
             gsap.to(span[videoId], {
@@ -97,7 +97,7 @@ const VideoCarousel = () => {
       const animUpdate = () => {
         anim.progress(
           videoRef.current[videoId].currentTime /
-            hightlightsSlides[videoId].videoDuration
+          hightlightsSlides[videoId].videoDuration
         );
       };
 
@@ -159,9 +159,8 @@ const VideoCarousel = () => {
                 <video
                   id="video"
                   playsInline={true}
-                  className={`${
-                    list.id === 2 && "translate-x-44"
-                  } pointer-events-none`}
+                  className={`${list.id === 2 && "translate-x-44"
+                    } pointer-events-none`}
                   preload="auto"
                   muted
                   ref={(el) => (videoRef.current[i] = el)}
@@ -215,8 +214,8 @@ const VideoCarousel = () => {
               isLastVideo
                 ? () => handleProcess("video-reset")
                 : !isPlaying
-                ? () => handleProcess("play")
-                : () => handleProcess("pause")
+                  ? () => handleProcess("play")
+                  : () => handleProcess("pause")
             }
           />
         </button>

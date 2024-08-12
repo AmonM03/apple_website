@@ -15,7 +15,7 @@ export function Model(props) {
 
   const texture = useTexture(props.item.img);
 
-  
+
   useEffect(() => {
     Object.entries(materials).map((material) => {
       // these are the material names that can't be changed color
@@ -32,8 +32,8 @@ export function Model(props) {
     });
   }, [materials, props.item]);
 
-  
-  
+
+
 
   return (
     <group {...props} dispose={null}>
