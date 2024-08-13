@@ -31,6 +31,7 @@ const VideoCarousel = () => {
       ease: "power2.inOut",
     });
 
+    // video animation plays the video when it is in view
     gsap.to("#video", {
       scrollTrigger: {
         trigger: "#video",
